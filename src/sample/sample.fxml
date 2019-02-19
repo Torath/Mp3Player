@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="window" prefHeight="446.0" prefWidth="704.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+  <children>
+    <HBox id="HBox" alignment="CENTER_RIGHT" prefHeight="31.0" prefWidth="702.0" spacing="5.0" VBox.vgrow="NEVER">
+      <children>
+            <Button fx:id="minimizeButton" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onMouseClicked="#minimize" text="_" />
+            <Button fx:id="closeButton" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onMouseClicked="#closeApp" text="X" />
+      </children>
+      <padding>
+        <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+      </padding>
+    </HBox>
+      <AnchorPane minHeight="-Infinity" prefHeight="420.0" prefWidth="810.0">
+         <children>
+            <ImageView fx:id="albumCoverImageView" fitHeight="234.0" fitWidth="274.0" layoutX="41.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="625.0" AnchorPane.topAnchor="31.0">
+               <image>
+                  <Image url="@../images/album_cover.png" />
+               </image>
+            </ImageView>
+            <ToggleButton id="playpause-button" fx:id="playpauseButton" layoutX="101.0" layoutY="342.0" mnemonicParsing="false" onMouseClicked="#playPause" prefHeight="81.0" prefWidth="115.0" stylesheets="@application.css" />
+            <Button fx:id="backButton" layoutX="216.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#playPrev" prefHeight="63.0" prefWidth="86.0" />
+            <Button fx:id="nextButton" layoutX="22.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#playNext" prefHeight="63.0" prefWidth="79.0" />
+            <Label fx:id="songTitleLabel" alignment="CENTER" layoutY="265.0" prefHeight="25.0" prefWidth="316.0" text="(nothing playing)" textAlignment="CENTER" />
+            <Label layoutX="370.0" layoutY="14.0" prefHeight="17.0" prefWidth="316.0" />
+            <Label layoutX="339.0" layoutY="31.0" prefHeight="17.0" prefWidth="540.0" text="Playlist:" />
+            <ListView fx:id="musicListView" layoutX="339.0" layoutY="53.0" onMouseClicked="#switchMusic" prefHeight="315.0" prefWidth="540.0" />
+            <Slider fx:id="progressSlider" layoutX="36.0" layoutY="291.0" prefHeight="14.0" prefWidth="245.0" />
+            <Label fx:id="progressLabel" layoutX="281.0" layoutY="289.0" prefHeight="17.0" prefWidth="39.0" text="0" />
+            <Button fx:id="addToPlaylistButton" layoutX="339.0" layoutY="367.0" mnemonicParsing="false" onMouseClicked="#browseFile" prefHeight="25.0" prefWidth="540.0" text="Add to playlist" />
+            <Slider fx:id="volumeSlider" layoutX="88.0" layoutY="319.0" />
+            <Label fx:id="volumeLabel" layoutX="76.0" layoutY="318.0" text="🔊" />
+            <Label fx:id="secondsLabel" alignment="CENTER_RIGHT" layoutX="6.0" layoutY="290.0" prefHeight="17.0" prefWidth="33.0" text="0">
+               <padding>
+                  <Insets right="3.0" />
+               </padding></Label>
+         </children>
+      </AnchorPane>
+  </children>
+</VBox>

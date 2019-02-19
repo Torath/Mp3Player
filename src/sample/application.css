@@ -1,0 +1,51 @@
+#playpause-button:selected{
+    -fx-background-image: url("/images/play.png");
+    -fx-background-size: 64px 64px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#playpause-button{
+    -fx-background-image: url("/images/pause.png");
+    -fx-background-size: 64px 64px;
+        -fx-background-repeat: no-repeat;
+        -fx-background-position: center;
+}
+
+#backButton {
+     -fx-background-image: url("/images/next.png");
+     -fx-background-size: 40px 40px;
+     -fx-background-repeat: no-repeat;
+     -fx-background-position: center;
+ }
+
+#nextButton {
+    -fx-background-image: url("/images/prev.png");
+    -fx-background-size: 40px 40px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#closeButton {
+    -fx-background-image: url("/images/close.png");
+    -fx-background-color: #bf1338;
+    -fx-background-size: 25px 25px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#minimizeButton {
+    -fx-background-image: url("/images/minimize.png");
+    -fx-background-size: 25px 25px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+}
+
+#window{
+ -fx-background-color:#69aee0;
+}
+
+#musicListView{
+ -fx-background-color:#bfbbbb;
+ opacity: 0.7;
+}
